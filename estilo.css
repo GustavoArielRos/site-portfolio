@@ -1,0 +1,65 @@
+.foto-perfil {
+    height: 300px;
+    width: 300px;
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+.custom-email{
+    font-size:16px;
+    font-family:Arial;
+    letter-spacing: normal;
+    color: rgb(66, 66, 66);
+}
+
+.corPrimaria{
+    background-color: rgb(22, 22, 22);
+    height: 100%;
+    width: 100%;
+
+}
+
+.corSecundaria{
+    background-color: #e9ecef;
+}
+
+.icones{
+    padding-left:5px;
+}
+
+.textoPrimario{
+    color: rgb(207, 207, 207);
+}
+
+.titulos{
+    text-decoration:underline;
+}
+
+.textoPreto{
+    color:rgb(107, 104, 104) !important;
+}
+
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden; 
+    scroll-behavior: smooth;
+}
+
+.alinha{
+    text-align: justify;
+}
+
+.alinhaexp{
+    font-size: 14px;
+    text-align: justify;
+    letter-spacing: -1px;
+}
+
+.fotoexp{
+    width: 200px;
+    height: 297px;
+}
