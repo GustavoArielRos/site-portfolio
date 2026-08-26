@@ -1,4 +1,4 @@
-.foto-perfil {
+/*.foto-perfil {
     height: 280px;
     width: 280px;
     max-width: 100%;
@@ -62,4 +62,568 @@ body, html {
 .fotoexp{
     width: 200px;
     height: 297px;
+}*/
+/* =========================================================
+   RESET / CONFIGURAÇÕES GERAIS
+   ========================================================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #f5f6f8;
+    color: #222;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+section {
+    scroll-margin-top: 70px;
+}
+
+.container {
+    max-width: 1100px;
+}
+
+
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+
+.corSecundaria {
+    background-color: rgba(255, 255, 255, 0.96);
+}
+
+.navbar {
+    min-height: 68px;
+    padding: 10px 5%;
+    border-bottom: 1px solid #e5e5e5;
+
+    /* deixa a navbar acompanhando a página */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.navbar h4 {
+    margin: 0;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #171717;
+}
+
+.navbar-nav .nav-link {
+    position: relative;
+    margin-left: 20px;
+    font-weight: 500;
+    color: #333 !important;
+    transition: color 0.25s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #000 !important;
+}
+
+.navbar-nav .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 3px;
+    width: 0;
+    height: 2px;
+    background-color: #222;
+    transition: width 0.25s ease;
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 100%;
+}
+
+
+/* =========================================================
+   HERO / CABEÇALHO
+   ========================================================= */
+
+.corPrimaria {
+    width: 100%;
+    min-height: 540px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0;
+    padding: 80px 20px;
+
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(255, 255, 255, 0.08),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #0f0f0f,
+            #181818 50%,
+            #252525
+        );
+
+    color: white;
+}
+
+.corPrimaria .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.foto-perfil {
+    width: 280px;
+    height: 280px;
+    max-width: 80vw;
+
+    object-fit: cover;
+    border-radius: 50%;
+
+    border: 6px solid rgba(255, 255, 255, 0.9);
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.45);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.foto-perfil:hover {
+    transform: translateY(-6px) scale(1.02);
+
+    box-shadow:
+        0 22px 50px rgba(0, 0, 0, 0.55);
+}
+
+.textoPrimario {
+    color: #f5f5f5;
+}
+
+.corPrimaria h1 {
+    margin-top: 28px;
+    margin-bottom: 10px;
+
+    font-size: 2.8rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.corPrimaria .lead {
+    color: #c9c9c9;
+    font-size: 1.15rem;
+}
+
+
+/* =========================================================
+   REDES SOCIAIS
+   ========================================================= */
+
+.corPrimaria a {
+    text-decoration: none;
+}
+
+.corPrimaria .fab {
+    margin: 20px 8px 0;
+
+    font-size: 32px;
+
+    transition:
+        transform 0.25s ease,
+        opacity 0.25s ease;
+}
+
+.corPrimaria .fab:hover {
+    transform: translateY(-4px);
+    opacity: 0.7;
+}
+
+.icones {
+    padding-left: 5px;
+}
+
+
+/* =========================================================
+   TÍTULOS DAS SEÇÕES
+   ========================================================= */
+
+.titulos {
+    position: relative;
+
+    display: inline-block;
+
+    margin-bottom: 35px;
+
+    text-decoration: none;
+
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1b1b1b;
+}
+
+.titulos::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: -12px;
+
+    transform: translateX(-50%);
+
+    width: 55px;
+    height: 3px;
+
+    border-radius: 10px;
+
+    background-color: #222;
+}
+
+
+/* =========================================================
+   SOBRE MIM
+   ========================================================= */
+
+#sobre-mim {
+    margin: 0;
+    padding: 90px 20px;
+
+    background-color: #ffffff;
+}
+
+#sobre-mim .lead {
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    font-size: 1.08rem;
+    line-height: 1.9;
+
+    color: #555;
+}
+
+
+/* =========================================================
+   TEXTO
+   ========================================================= */
+
+.alinha {
+    text-align: justify;
+}
+
+.alinhaexp {
+    font-size: 14px;
+    line-height: 1.7;
+    text-align: left;
+    letter-spacing: normal;
+    color: #666;
+}
+
+.textoPreto {
+    color: #444 !important;
+}
+
+
+/* =========================================================
+   EXPERIÊNCIAS
+   ========================================================= */
+
+#experiencia {
+    padding: 90px 20px;
+
+    background-color: #f5f6f8;
+}
+
+#experiencia .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#experiencia .row {
+    width: 100%;
+}
+
+#experiencia .card {
+    height: 280px;
+    width: 100%;
+
+    overflow: hidden;
+
+    border: none;
+    border-radius: 16px;
+
+    background-color: #ffffff;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+    display: flex;
+    flex-direction: row;
+}
+
+#experiencia .card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+#experiencia .card-body {
+    padding: 28px;
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#experiencia .card strong {
+    padding: 5px 12px;
+
+    border-radius: 20px;
+
+    background-color: #f0f0f0;
+
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+
+    color: #555 !important;
+}
+
+#experiencia .card h3 {
+    margin-top: 12px;
+
+    font-size: 1.35rem;
+    font-weight: 700;
+
+    color: #222;
+}
+
+#experiencia .card p {
+    margin-top: 5px;
+}
+/*
+#experiencia .card-img-right {
+    object-fit: contain;
+
+    padding: 20px;
+
+    background-color: #fafafa;
+
+    transition: transform 0.3s ease;
+}*/
+
+#experiencia .card-img-right {
+    width: 200px !important;
+    height: 280px !important;
+
+    object-fit: contain;
+
+    padding: 20px;
+
+    background-color: #ffffff;
+
+    flex-shrink: 0;
+
+    transition: transform 0.3s ease;
+}
+
+#experiencia .card:hover .card-img-right {
+    transform: scale(1.04);
+}
+
+
+/* =========================================================
+   CONTATO
+   ========================================================= */
+
+#contato {
+    padding: 60px 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #161616,
+            #242424
+        );
+
+    color: white;
+}
+
+#contato .titulos {
+    color: white;
+}
+
+#contato .titulos::after {
+    background-color: white;
+}
+
+.custom-email {
+    display: inline-block;
+
+    margin-top: 10px;
+    padding: 12px 22px;
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 30px;
+
+    background-color: rgba(255, 255, 255, 0.06);
+
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: normal;
+
+    color: #ddd;
+
+    transition:
+        background-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.custom-email:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+   ========================================================= */
+
+@media (max-width: 991px) {
+
+    .navbar-nav .nav-link {
+        margin-left: 0;
+        padding: 10px 0;
+    }
+
+    .navbar-nav .nav-link::after {
+        display: none;
+    }
+
+    .corPrimaria {
+        min-height: 500px;
+        padding: 70px 20px;
+    }
+
+    .foto-perfil {
+        width: 240px;
+        height: 240px;
+    }
+
+    .corPrimaria h1 {
+        font-size: 2.3rem;
+    }
+
+    #sobre-mim,
+    #experiencia {
+        padding: 70px 20px;
+    }
+}
+
+
+@media (max-width: 767px) {
+
+    .navbar {
+        padding: 10px 20px;
+    }
+
+    .navbar h4 {
+        font-size: 1.15rem;
+    }
+
+    .corPrimaria {
+        min-height: 470px;
+        padding: 60px 15px;
+    }
+
+    .foto-perfil {
+        width: 210px;
+        height: 210px;
+    }
+
+    .corPrimaria h1 {
+        margin-top: 22px;
+        font-size: 2rem;
+    }
+
+    .corPrimaria .lead {
+        font-size: 1rem;
+    }
+
+    .titulos {
+        font-size: 1.7rem;
+    }
+
+    #sobre-mim .lead {
+        font-size: 1rem;
+        line-height: 1.75;
+        text-align: left;
+    }
+
+    #experiencia .card {
+        min-height: auto;
+    }
+
+    #experiencia .card-body {
+        padding: 24px;
+    }
+
+    #experiencia .card h3 {
+        font-size: 1.25rem;
+    }
+
+    .alinhaexp {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    #contato {
+        padding: 50px 15px;
+    }
+
+    .custom-email {
+        font-size: 14px;
+    }
+}
+
+
+@media (max-width: 400px) {
+
+    .foto-perfil {
+        width: 180px;
+        height: 180px;
+    }
+
+    .corPrimaria h1 {
+        font-size: 1.8rem;
+    }
+
+    .corPrimaria .lead {
+        font-size: 0.95rem;
+    }
+
+    .custom-email {
+        padding: 10px 15px;
+        font-size: 13px;
+    }
 }
